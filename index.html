@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Level Max Legal</title>
+
+<style>
+  /* Import a modern, clean font */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+  :root {
+    --bg-color: #09090b; /* Deep zinc */
+    --card-bg: #18181b; 
+    --text-main: #e4e4e7;
+    --text-muted: #a1a1aa;
+    --accent: #38bdf8;
+    --accent-gradient: linear-gradient(135deg, #38bdf8, #818cf8);
+    --border-color: rgba(255, 255, 255, 0.08);
+  }
+
+  body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+  }
+
+  /* Sticky, blurred header */
+  header {
+    position: sticky;
+    top: 0;
+    background: rgba(9, 9, 11, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 800;
+    background: var(--accent-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px;
+  }
+
+  nav a {
+    color: var(--text-muted);
+    margin-left: 24px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: color 0.2s ease;
+  }
+
+  nav a:hover {
+    color: var(--text-main);
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+  }
+
+  /* Clean card layout for the legal sections */
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 40px -10px rgba(0,0,0,0.5);
+  }
+
+  h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+  }
+
+  .last-updated {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  h3 {
+    color: var(--accent);
+    margin-top: 32px;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  p, ul {
+    color: var(--text-muted);
+    margin-bottom: 16px;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+
+  li {
+    margin-bottom: 8px;
+  }
+
+  strong {
+    color: var(--text-main);
+  }
+
+  footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border-color);
+    background: var(--bg-color);
+  }
+
+  /* Responsive adjustments for mobile */
+  @media (max-width: 600px) {
+    header {
+      flex-direction: column;
+      gap: 16px;
+      padding: 20px;
+    }
+    nav a {
+      margin: 0 12px;
+    }
+    .card {
+      padding: 24px;
+    }
+    h2 {
+      font-size: 1.75rem;
+    }
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>LEVEL MAX</h1>
+  <nav>
+    <a href="#privacy">Privacy Policy</a>
+    <a href="#terms">Terms of Service</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <div class="card" id="privacy">
+    <h2>Privacy Policy</h2>
+    <div class="last-updated">Last Updated: March 31, 2026</div>
+
+    <p>This Privacy Policy explains how <strong>Level Max</strong> ("we", "our", "us") collects, uses, and protects your information when you use our application.</p>
+
+    <h3>1. Information We Collect</h3>
+    <ul>
+      <li>Email address and name for account creation</li>
+      <li>Images and facial data for AI analysis</li>
+      <li>AI-generated results such as scores and suggestions</li>
+      <li>Device information (model, OS, usage data)</li>
+      <li>Crash logs via Firebase Crashlytics</li>
+    </ul>
+
+    <h3>2. How We Use Information</h3>
+    <ul>
+      <li>Provide face scanning and AI analysis features</li>
+      <li>Improve app performance and reliability</li>
+      <li>Authenticate users securely</li>
+      <li>Fix bugs and technical issues</li>
+    </ul>
+
+    <h3>3. Face Data & Sensitive Information</h3>
+    <p>Your facial data is processed only to generate AI-based results within the app. We do not sell, rent, or share your facial data with third parties.</p>
+
+    <h3>4. Data Retention</h3>
+    <p>We retain your data only as long as necessary to provide services. If you delete your account, your data is permanently removed from our systems.</p>
+
+    <h3>5. Account Deletion</h3>
+    <p>You can delete your account directly from within the app. This action permanently removes your data from our servers.</p>
+
+    <h3>6. Data Security</h3>
+    <p>We use industry-standard security measures and Firebase infrastructure to protect your data. However, no system is completely secure.</p>
+
+    <h3>7. Third-Party Services</h3>
+    <p>We use Firebase (Authentication, Firestore, Crashlytics) and AI services (Gemini) to operate the app.</p>
+
+    <h3>8. Payments</h3>
+    <p>All purchases are handled through Google Play Billing. All sales are final and non-refundable unless required by law.</p>
+
+    <h3>9. AI Disclaimer</h3>
+    <p>All results are generated by artificial intelligence and are not scientifically accurate or definitive. They are intended for entertainment purposes only.</p>
+
+    <h3>10. Children's Privacy</h3>
+    <p>Our app is not specifically directed at children under 13. If we become aware of such data collection, we will delete it.</p>
+
+    <h3>11. International Use</h3>
+    <p>Your data may be processed in different countries depending on service providers.</p>
+
+    <h3>12. Your Rights</h3>
+    <p>You may request access, correction, or deletion of your data by contacting us.</p>
+
+    <h3>13. Changes to Policy</h3>
+    <p>We may update this Privacy Policy at any time. Continued use of the app indicates acceptance.</p>
+
+    <h3>14. Contact</h3>
+    <p>Email: <strong>levelmaxing952@gmail.com</strong></p>
+  </div>
+
+  <div class="card" id="terms">
+    <h2>Terms & Conditions</h2>
+    <div class="last-updated">Last Updated: March 31, 2026</div>
+
+    <h3>1. Acceptance of Terms</h3>
+    <p>By using <strong>Level Max</strong>, you agree to these Terms.</p>
+
+    <h3>2. Use of the App</h3>
+    <ul>
+      <li>You agree not to misuse the app.</li>
+      <li>You will not upload harmful or illegal content.</li>
+      <li>You use the app at your own risk.</li>
+    </ul>
+
+    <h3>3. AI Disclaimer</h3>
+    <p>All outputs are AI-generated and may be inaccurate or subjective.</p>
+
+    <h3>4. User Content</h3>
+    <p>You retain ownership of your data, but grant us permission to process it for app functionality.</p>
+
+    <h3>5. Payments & Subscriptions</h3>
+    <p>All purchases are processed via Google Play. No refunds are provided unless required by law.</p>
+
+    <h3>6. Limitation of Liability</h3>
+    <p>We are not responsible for decisions made based on app results or any indirect damages.</p>
+
+    <h3>7. Termination</h3>
+    <p>We may suspend or terminate accounts for misuse or violation of terms.</p>
+
+    <h3>8. Governing Law</h3>
+    <p>These terms are governed by the laws of India.</p>
+
+    <h3>9. Contact</h3>
+    <p>Email: <strong>levelmaxing952@gmail.com</strong></p>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 LEVEL MAX | HAPPY MAHAWAR
+</footer>
+
+</body>
+</html>
