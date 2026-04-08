@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Legal — Level Max</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #F0CC6E;
+      --gold-dim: #7a6230;
+      --dark: #0A0A0A;
+      --dark2: #111111;
+      --dark3: #181818;
+      --white: #F5F0E8;
+      --gray: #888880;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--dark);
+      color: var(--white);
+      font-family: 'DM Sans', sans-serif;
+      line-height: 1.7;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 48px;
+      border-bottom: 1px solid rgba(201,168,76,0.1);
+      position: sticky;
+      top: 0;
+      background: rgba(10,10,10,0.97);
+      z-index: 100;
+      backdrop-filter: blur(8px);
+    }
+    .nav-logo {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.6rem;
+      letter-spacing: 0.12em;
+      color: var(--gold-light);
+      text-decoration: none;
+    }
+    .nav-back {
+      color: var(--gray);
+      text-decoration: none;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+    }
+    .nav-back:hover { color: var(--gold-light); }
+
+    /* TAB BAR */
+    .tab-bar {
+      display: flex;
+      gap: 0;
+      border-bottom: 1px solid rgba(201,168,76,0.1);
+      background: var(--dark2);
+      padding: 0 48px;
+      overflow-x: auto;
+    }
+    .tab-bar::-webkit-scrollbar { display: none; }
+    .tab-btn {
+      padding: 18px 28px;
+      background: none;
+      border: none;
+      border-bottom: 2px solid transparent;
+      color: var(--gray);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .tab-btn:hover { color: var(--white); }
+    .tab-btn.active {
+      color: var(--gold-light);
+      border-bottom-color: var(--gold);
+    }
+
+    /* PANELS */
+    .panel { display: none; }
+    .panel.active { display: block; }
+
+    /* CONTENT */
+    .legal-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 64px 48px 100px;
+    }
+    .legal-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(2.4rem, 6vw, 3.5rem);
+      letter-spacing: 0.06em;
+      color: var(--white);
+      margin-bottom: 6px;
+      line-height: 1;
+    }
+    .effective-date {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      color: rgba(136,136,128,0.55);
+      letter-spacing: 0.1em;
+      margin-bottom: 36px;
+      margin-top: 8px;
+    }
+    .intro {
+      color: var(--gray);
+      font-size: 0.95rem;
+      line-height: 1.75;
+      margin-bottom: 40px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid rgba(201,168,76,0.07);
+    }
+    h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: 0.08em;
+      color: var(--gold-light);
+      margin-top: 40px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    h2 .num {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      color: var(--gold-dim);
+      background: rgba(201,168,76,0.08);
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 4px;
+      padding: 2px 7px;
+      letter-spacing: 0.05em;
+      font-weight: 400;
+    }
+    p {
+      color: var(--gray);
+      font-size: 0.93rem;
+      margin-bottom: 14px;
+      line-height: 1.75;
+    }
+    ul {
+      color: var(--gray);
+      font-size: 0.93rem;
+      padding-left: 0;
+      margin-bottom: 16px;
+      list-style: none;
+    }
+    ul li {
+      margin-bottom: 8px;
+      padding-left: 20px;
+      position: relative;
+    }
+    ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--gold-dim);
+      font-size: 0.8rem;
+    }
+    .contact-box {
+      margin-top: 48px;
+      background: var(--dark3);
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 6px;
+      padding: 28px 32px;
+    }
+    .contact-box .label {
+      color: var(--white);
+      font-weight: 500;
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+    }
+    .contact-box a {
+      color: var(--gold-light);
+      text-decoration: none;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.88rem;
+      letter-spacing: 0.05em;
+    }
+    .contact-box a:hover { text-decoration: underline; }
+
+    /* FOOTER */
+    footer {
+      border-top: 1px solid rgba(201,168,76,0.08);
+      padding: 32px 48px;
+      text-align: center;
+      color: rgba(136,136,128,0.45);
+      font-size: 0.78rem;
+      letter-spacing: 0.04em;
+    }
+    footer a { color: var(--gold-dim); text-decoration: none; }
+    footer a:hover { color: var(--gold-light); }
+
+    @media (max-width: 768px) {
+      nav { padding: 16px 20px; }
+      .tab-bar { padding: 0 12px; }
+      .tab-btn { padding: 14px 16px; font-size: 0.76rem; }
+      .legal-container { padding: 40px 20px 80px; }
+      footer { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">LEVEL MAX</a>
+    <a href="index.html" class="nav-back">← Back to Home</a>
+  </nav>
+
+  <!-- TAB BAR -->
+  <div class="tab-bar">
+    <button class="tab-btn active" onclick="showTab('privacy', this)">Privacy Policy</button>
+    <button class="tab-btn" onclick="showTab('terms', this)">Terms &amp; Conditions</button>
+    <button class="tab-btn" onclick="showTab('deletion', this)">Data Deletion</button>
+  </div>
+
+  <!-- ══════════════ PRIVACY POLICY ══════════════ -->
+  <div class="panel active" id="panel-privacy">
+    <div class="legal-container">
+      <div class="legal-tag">// Legal Document</div>
+      <h1>PRIVACY POLICY</h1>
+      <div class="effective-date">LAST UPDATED: APRIL 9, 2026</div>
+      <p class="intro">This Privacy Policy explains how Level Max ("we", "our", "us") collects, uses, and protects your information when you use our application.</p>
+
+      <h2><span class="num">01</span> Information We Collect</h2>
+      <ul>
+        <li>Email address and name for account creation</li>
+        <li>Images and facial data for AI analysis</li>
+        <li>Physical attributes including age, weight, and height</li>
+        <li>AI-generated results such as scores and suggestions</li>
+        <li>Device information (model, OS, usage data)</li>
+        <li>Crash logs via Firebase Crashlytics</li>
+      </ul>
+
+      <h2><span class="num">02</span> How We Use Information</h2>
+      <ul>
+        <li>Provide face scanning, AI analysis features, and personalized results based on physical metrics</li>
+        <li>Improve app performance and reliability</li>
+        <li>Authenticate users securely</li>
+        <li>Fix bugs and technical issues</li>
+      </ul>
+
+      <h2><span class="num">03</span> Face Data &amp; Physical Metrics</h2>
+      <p>Your facial data and physical metrics (age, weight, height) are processed only to generate AI-based results within the app. We do not sell, rent, or share this data with third parties.</p>
+
+      <h2><span class="num">04</span> Data Retention</h2>
+      <p>We retain your data only as long as necessary to provide services. If you delete your account, your data is permanently removed from our systems.</p>
+
+      <h2><span class="num">05</span> Account Deletion</h2>
+      <p>You can delete your account directly from within the app. This action permanently removes your data from our servers.</p>
+
+      <h2><span class="num">06</span> Data Security</h2>
+      <p>We use industry-standard security measures and Firebase infrastructure to protect your data. However, no system is completely secure.</p>
+
+      <h2><span class="num">07</span> Third-Party Services</h2>
+      <p>We use Firebase (Authentication, Firestore, Crashlytics) and AI services (Gemini) to operate the app.</p>
+
+      <h2><span class="num">08</span> Payments</h2>
+      <p>All purchases are handled through Google Play Billing. All sales are final and non-refundable unless required by law.</p>
+
+      <h2><span class="num">09</span> AI Disclaimer</h2>
+      <p>All results are generated by artificial intelligence and are not scientifically accurate or definitive. They are intended for entertainment purposes only.</p>
+
+      <h2><span class="num">10</span> Children's Privacy</h2>
+      <p>Our app is not specifically directed at children under 13. If we become aware of such data collection, we will delete it.</p>
+
+      <h2><span class="num">11</span> International Use</h2>
+      <p>Your data may be processed in different countries depending on service providers.</p>
+
+      <h2><span class="num">12</span> Your Rights</h2>
+      <p>You may request access, correction, or deletion of your data by contacting us.</p>
+
+      <h2><span class="num">13</span> Changes to Policy</h2>
+      <p>We may update this Privacy Policy at any time. Continued use of the app indicates acceptance.</p>
+
+      <h2><span class="num">14</span> Contact</h2>
+      <div class="contact-box">
+        <p class="label">Get in touch</p>
+        <p>Email: <a href="mailto:levelmaxing952@gmail.com">levelmaxing952@gmail.com</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════ TERMS & CONDITIONS ══════════════ -->
+  <div class="panel" id="panel-terms">
+    <div class="legal-container">
+      <div class="legal-tag">// Legal Document</div>
+      <h1>TERMS &amp; CONDITIONS</h1>
+      <div class="effective-date">LAST UPDATED: APRIL 9, 2026</div>
+
+      <h2><span class="num">01</span> Acceptance of Terms</h2>
+      <p>By using Level Max, you agree to these Terms.</p>
+
+      <h2><span class="num">02</span> Use of the App</h2>
+      <ul>
+        <li>You agree not to misuse the app</li>
+        <li>You will not upload harmful or illegal content</li>
+        <li>You will provide accurate physical metrics for the app to function as intended</li>
+        <li>You use the app at your own risk</li>
+      </ul>
+
+      <h2><span class="num">03</span> AI Disclaimer</h2>
+      <p>All outputs are AI-generated and may be inaccurate or subjective.</p>
+
+      <h2><span class="num">04</span> User Content</h2>
+      <p>You retain ownership of your data, but grant us permission to process it for app functionality.</p>
+
+      <h2><span class="num">05</span> Payments &amp; Subscriptions</h2>
+      <p>All purchases are processed via Google Play. No refunds are provided unless required by law.</p>
+
+      <h2><span class="num">06</span> Limitation of Liability</h2>
+      <p>We are not responsible for decisions made based on app results or any indirect damages.</p>
+
+      <h2><span class="num">07</span> Termination</h2>
+      <p>We may suspend or terminate accounts for misuse or violation of terms.</p>
+
+      <h2><span class="num">08</span> Governing Law</h2>
+      <p>These terms are governed by the laws of India.</p>
+
+      <h2><span class="num">09</span> Contact</h2>
+      <div class="contact-box">
+        <p class="label">Get in touch</p>
+        <p>Email: <a href="mailto:levelmaxing952@gmail.com">levelmaxing952@gmail.com</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════ DATA DELETION ══════════════ -->
+  <div class="panel" id="panel-deletion">
+    <div class="legal-container">
+      <div class="legal-tag">// Legal Document</div>
+      <h1>DATA DELETION</h1>
+      <div class="effective-date">LAST UPDATED: APRIL 9, 2026</div>
+      <p class="intro">You have the right to request deletion of your account and all associated personal data at any time.</p>
+
+      <h2><span class="num">01</span> What Gets Deleted</h2>
+      <ul>
+        <li>Your account and authentication credentials</li>
+        <li>All scan history and scores</li>
+        <li>Physical metrics (age, weight, height)</li>
+        <li>Usage data and subscription information</li>
+        <li>Any other personal data associated with your account</li>
+      </ul>
+      <p>Note: Photos are already deleted immediately after each scan and are not stored on our servers.</p>
+
+      <h2><span class="num">02</span> How to Delete Your Account</h2>
+      <p><strong style="color:var(--white)">Option 1 — In App:</strong> Go to Profile → Settings → Delete Account. This will immediately and permanently delete all your data.</p>
+      <p><strong style="color:var(--white)">Option 2 — By Email:</strong> Send a deletion request to <a href="mailto:levelmaxing952@gmail.com" style="color:var(--gold-light);font-family:'DM Mono',monospace;font-size:0.88rem;">levelmaxing952@gmail.com</a> with the subject "Account Deletion Request" and include the email on your account. We will process it within 30 days.</p>
+
+      <h2><span class="num">03</span> After Deletion</h2>
+      <p>Once deleted, this action cannot be undone. All data is permanently removed from our systems within 30 days of the request.</p>
+
+      <div class="contact-box">
+        <p class="label">Contact for deletion requests</p>
+        <p>Email: <a href="mailto:levelmaxing952@gmail.com">levelmaxing952@gmail.com</a></p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 LEVEL MAX | HAPPY MAHAWAR &nbsp;·&nbsp; <a href="index.html">Home</a>
+  </footer>
+
+  <script>
+    function showTab(name, btn) {
+      document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById('panel-' + name).classList.add('active');
+      btn.classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Support direct hash links from footer e.g. legal.html#terms
+    window.addEventListener('DOMContentLoaded', () => {
+      const hash = window.location.hash;
+      if (hash === '#terms') {
+        showTab('terms', document.querySelectorAll('.tab-btn')[1]);
+      } else if (hash === '#deletion') {
+        showTab('deletion', document.querySelectorAll('.tab-btn')[2]);
+      }
+    });
+  </script>
+
+</body>
+</html>
