@@ -223,71 +223,69 @@
     <a href="index.html" class="nav-back">← Back to Home</a>
   </nav>
 
-  <!-- TAB BAR -->
   <div class="tab-bar">
     <button class="tab-btn active" onclick="showTab('privacy', this)">Privacy Policy</button>
     <button class="tab-btn" onclick="showTab('terms', this)">Terms &amp; Conditions</button>
     <button class="tab-btn" onclick="showTab('deletion', this)">Data Deletion</button>
   </div>
 
-  <!-- ══════════════ PRIVACY POLICY ══════════════ -->
   <div class="panel active" id="panel-privacy">
     <div class="legal-container">
       <div class="legal-tag">// Legal Document</div>
       <h1>PRIVACY POLICY</h1>
-      <div class="effective-date">LAST UPDATED: APRIL 9, 2026</div>
+      <div class="effective-date">LAST UPDATED: APRIL 14, 2026</div>
       <p class="intro">This Privacy Policy explains how Level Max ("we", "our", "us") collects, uses, and protects your information when you use our application.</p>
 
       <h2><span class="num">01</span> Information We Collect</h2>
       <ul>
-        <li>Email address and name for account creation</li>
-        <li>Images and facial data for AI analysis</li>
+        <li>Email address and basic profile details for secure account creation</li>
+        <li>Images from your device camera or photo library (collected only with your explicit permission) for AI analysis</li>
         <li>Physical attributes including age, weight, and height</li>
-        <li>AI-generated results such as scores and suggestions</li>
-        <li>Device information (model, OS, usage data)</li>
-        <li>Crash logs via Firebase Crashlytics</li>
+        <li>AI-generated results, historical scan scores, and suggestions</li>
+        <li>Device information, advertising identifiers (such as Android Advertising ID), and push notification tokens</li>
+        <li>App usage data and crash logs via Firebase</li>
       </ul>
 
       <h2><span class="num">02</span> How We Use Information</h2>
       <ul>
-        <li>Provide face scanning, AI analysis features, and personalized results based on physical metrics</li>
-        <li>Improve app performance and reliability</li>
-        <li>Authenticate users securely</li>
-        <li>Fix bugs and technical issues</li>
+        <li>To provide core face scanning, AI analysis features, and personalized results</li>
+        <li>To serve customized or non-customized advertisements via third-party ad networks</li>
+        <li>To send important notifications and lock-in reminders</li>
+        <li>To improve app performance, troubleshoot technical issues, and ensure secure authentication</li>
       </ul>
 
-      <h2><span class="num">03</span> Face Data &amp; Physical Metrics</h2>
-      <p>Your facial data and physical metrics (age, weight, height) are processed only to generate AI-based results within the app. We do not sell, rent, or share this data with third parties.</p>
+      <h2><span class="num">03</span> Camera, Photos &amp; Face Data</h2>
+      <p>We require camera and gallery access strictly for the core functionality of scanning your face and physique. Your facial data and physical metrics are processed exclusively to generate AI-based results within the app. Photos are processed temporarily and immediately discarded after analysis; they are not permanently stored on our servers, sold, or shared with third parties.</p>
 
       <h2><span class="num">04</span> Data Retention</h2>
-      <p>We retain your data only as long as necessary to provide services. If you delete your account, your data is permanently removed from our systems.</p>
+      <p>We retain your profile data and scan history only as long as you maintain an active account to provide you with ongoing tracking. If you delete your account, your data is permanently removed from our active systems.</p>
 
       <h2><span class="num">05</span> Account Deletion</h2>
-      <p>You can delete your account directly from within the app. This action permanently removes your data from our servers.</p>
+      <p>You have full control over your data. You can delete your account and all associated data directly from within the app settings at any time, which triggers permanent removal from our servers.</p>
 
       <h2><span class="num">06</span> Data Security</h2>
-      <p>We use industry-standard security measures and Firebase infrastructure to protect your data. However, no system is completely secure.</p>
+      <p>We use industry-standard security measures and Google Firebase infrastructure to protect your data during transit and at rest. However, no system on the internet is completely immune to security breaches.</p>
 
-      <h2><span class="num">07</span> Third-Party Services</h2>
-      <p>We use Firebase (Authentication, Firestore, Crashlytics) and AI services (Gemini) to operate the app.</p>
+      <h2><span class="num">07</span> Third-Party Services &amp; Advertising</h2>
+      <p>We utilize third-party providers to operate the app. This includes Firebase (Authentication, Firestore, Storage, Cloud Messaging, Crashlytics) for backend infrastructure, Google AdMob for serving advertisements, and Google's AI services (Gemini) to generate your results. These third parties may collect device identifiers and usage data as outlined in their respective privacy policies.</p>
 
       <h2><span class="num">08</span> Payments</h2>
-      <p>All purchases are handled through Google Play Billing. All sales are final and non-refundable unless required by law.</p>
+      <p>All in-app purchases and subscriptions are handled securely through Google Play Billing. All sales are final and non-refundable unless explicitly required by applicable consumer law.</p>
 
       <h2><span class="num">09</span> AI Disclaimer</h2>
-      <p>All results are generated by artificial intelligence and are not scientifically accurate or definitive. They are intended for entertainment purposes only.</p>
+      <p>All results are generated by artificial intelligence and are not scientifically accurate, definitive, or intended as medical advice. They are provided for entertainment and self-improvement tracking purposes only.</p>
 
       <h2><span class="num">10</span> Children's Privacy</h2>
-      <p>Our app is not specifically directed at children under 13. If we become aware of such data collection, we will delete it.</p>
+      <p>Our app is not directed at children under the age of 13. We do not knowingly collect personal information from children. If we become aware of such data collection, we will take immediate steps to delete it.</p>
 
       <h2><span class="num">11</span> International Use</h2>
-      <p>Your data may be processed in different countries depending on service providers.</p>
+      <p>Your data may be processed and stored on servers located outside of your country of residence, depending on the server locations of our service providers.</p>
 
       <h2><span class="num">12</span> Your Rights</h2>
-      <p>You may request access, correction, or deletion of your data by contacting us.</p>
+      <p>Depending on your jurisdiction, you may have the right to request access, correction, or deletion of your personal data by contacting our support team.</p>
 
       <h2><span class="num">13</span> Changes to Policy</h2>
-      <p>We may update this Privacy Policy at any time. Continued use of the app indicates acceptance.</p>
+      <p>We reserve the right to update this Privacy Policy at any time. Your continued use of the app following any updates indicates your acceptance of the new terms.</p>
 
       <h2><span class="num">14</span> Contact</h2>
       <div class="contact-box">
@@ -297,41 +295,40 @@
     </div>
   </div>
 
-  <!-- ══════════════ TERMS & CONDITIONS ══════════════ -->
   <div class="panel" id="panel-terms">
     <div class="legal-container">
       <div class="legal-tag">// Legal Document</div>
       <h1>TERMS &amp; CONDITIONS</h1>
-      <div class="effective-date">LAST UPDATED: APRIL 9, 2026</div>
+      <div class="effective-date">LAST UPDATED: APRIL 14, 2026</div>
 
       <h2><span class="num">01</span> Acceptance of Terms</h2>
-      <p>By using Level Max, you agree to these Terms.</p>
+      <p>By downloading, accessing, or using Level Max, you agree to be bound by these Terms &amp; Conditions.</p>
 
-      <h2><span class="num">02</span> Use of the App</h2>
+      <h2><span class="num">02</span> Use of the App &amp; Permissions</h2>
       <ul>
-        <li>You agree not to misuse the app</li>
-        <li>You will not upload harmful or illegal content</li>
-        <li>You will provide accurate physical metrics for the app to function as intended</li>
-        <li>You use the app at your own risk</li>
+        <li>You grant the app permission to access your device's camera and photo library strictly for generating app results</li>
+        <li>You agree not to misuse the app, attempt to bypass its security, or upload harmful/illegal content</li>
+        <li>You will provide accurate physical metrics to allow the app to function as intended</li>
+        <li>You use the app and interpret its results entirely at your own risk</li>
       </ul>
 
-      <h2><span class="num">03</span> AI Disclaimer</h2>
-      <p>All outputs are AI-generated and may be inaccurate or subjective.</p>
+      <h2><span class="num">03</span> AI Disclaimer &amp; Liability</h2>
+      <p>All outputs, scores, and recommendations are AI-generated and are entirely subjective. They do not represent medical, psychological, or professional advice. We are not liable for any direct or indirect damages, emotional distress, or decisions made based on the app's results.</p>
 
       <h2><span class="num">04</span> User Content</h2>
-      <p>You retain ownership of your data, but grant us permission to process it for app functionality.</p>
+      <p>You retain ownership of your submitted data, but grant us a temporary license to process it through our backend and AI infrastructure solely to return your scan results.</p>
 
       <h2><span class="num">05</span> Payments &amp; Subscriptions</h2>
-      <p>All purchases are processed via Google Play. No refunds are provided unless required by law.</p>
+      <p>Premium features are offered via Google Play Billing. All purchases are final. We reserve the right to change our pricing at any time. It is your responsibility to manage or cancel subscriptions through your Google Play account.</p>
 
-      <h2><span class="num">06</span> Limitation of Liability</h2>
-      <p>We are not responsible for decisions made based on app results or any indirect damages.</p>
+      <h2><span class="num">06</span> Advertising</h2>
+      <p>The free version of the app is ad-supported. You agree to the display of third-party advertisements within the app interface.</p>
 
       <h2><span class="num">07</span> Termination</h2>
-      <p>We may suspend or terminate accounts for misuse or violation of terms.</p>
+      <p>We reserve the right to suspend or permanently terminate your account without notice if you violate these terms or engage in fraudulent activity.</p>
 
       <h2><span class="num">08</span> Governing Law</h2>
-      <p>These terms are governed by the laws of India.</p>
+      <p>These terms are governed by and construed in accordance with the laws of India, without regard to its conflict of law provisions.</p>
 
       <h2><span class="num">09</span> Contact</h2>
       <div class="contact-box">
@@ -341,30 +338,28 @@
     </div>
   </div>
 
-  <!-- ══════════════ DATA DELETION ══════════════ -->
   <div class="panel" id="panel-deletion">
     <div class="legal-container">
       <div class="legal-tag">// Legal Document</div>
       <h1>DATA DELETION</h1>
-      <div class="effective-date">LAST UPDATED: APRIL 9, 2026</div>
-      <p class="intro">You have the right to request deletion of your account and all associated personal data at any time.</p>
+      <div class="effective-date">LAST UPDATED: APRIL 14, 2026</div>
+      <p class="intro">You have the absolute right to request the deletion of your account and all associated personal data at any time.</p>
 
       <h2><span class="num">01</span> What Gets Deleted</h2>
       <ul>
-        <li>Your account and authentication credentials</li>
-        <li>All scan history and scores</li>
-        <li>Physical metrics (age, weight, height)</li>
-        <li>Usage data and subscription information</li>
-        <li>Any other personal data associated with your account</li>
+        <li>Your Firebase authentication credentials (Email/Google Sign-in)</li>
+        <li>All historical scan data, progress tracking, and AI-generated scores</li>
+        <li>Stored physical metrics (age, weight, height)</li>
+        <li>Usage data and active subscription links tied to our backend</li>
       </ul>
-      <p>Note: Photos are already deleted immediately after each scan and are not stored on our servers.</p>
+      <p>Note: Photos are processed temporarily for analysis and are immediately discarded. They are never permanently stored on our servers.</p>
 
       <h2><span class="num">02</span> How to Delete Your Account</h2>
-      <p><strong style="color:var(--white)">Option 1 — In App:</strong> Go to Profile → Settings → Delete Account. This will immediately and permanently delete all your data.</p>
-      <p><strong style="color:var(--white)">Option 2 — By Email:</strong> Send a deletion request to <a href="mailto:levelmaxing952@gmail.com" style="color:var(--gold-light);font-family:'DM Mono',monospace;font-size:0.88rem;">levelmaxing952@gmail.com</a> with the subject "Account Deletion Request" and include the email on your account. We will process it within 30 days.</p>
+      <p><strong style="color:var(--white)">Option 1 — In App (Instant):</strong> Go to Profile → Settings → Delete Account. This will immediately and permanently erase all your data from our active database.</p>
+      <p><strong style="color:var(--white)">Option 2 — By Email:</strong> Send a data deletion request to <a href="mailto:levelmaxing952@gmail.com" style="color:var(--gold-light);font-family:'DM Mono',monospace;font-size:0.88rem;">levelmaxing952@gmail.com</a> with the subject "Account Deletion Request". Please ensure you email us from the address associated with your Level Max account. We will process your request within 30 days.</p>
 
       <h2><span class="num">03</span> After Deletion</h2>
-      <p>Once deleted, this action cannot be undone. All data is permanently removed from our systems within 30 days of the request.</p>
+      <p>Once an account is deleted, this action cannot be reversed. All data is permanently removed. You will lose access to any active subscriptions and previous scan history.</p>
 
       <div class="contact-box">
         <p class="label">Contact for deletion requests</p>
